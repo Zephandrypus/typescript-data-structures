@@ -45,21 +45,6 @@ class SortedSet<T>/* implements Iterable<T>*/ {
         }
     }
 
-    /*
-     * public [Symbol.iterator](): Iterator<T, any, undefined> {
-        const enumerator = new SetEnumerator<T>(this);
-        return {
-            next() {
-                const done = !enumerator.moveNext();
-                return {
-                    done,
-                    value: done ? undefined : enumerator.curNode.item
-                }
-            }
-        };
-    }*/
-
-
     protected compare(a: T, b: T): number {
         if (a < b)
             return -1;
